@@ -44,6 +44,7 @@
 		3042DC952B3769B3009FF2FD /* WorldOfPAYBACKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldOfPAYBACKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3042DC992B3769B3009FF2FD /* WorldOfPAYBACKUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPAYBACKUITests.swift; sourceTree = "<group>"; };
 		3042DC9B2B3769B3009FF2FD /* WorldOfPAYBACKUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPAYBACKUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3042DCAB2B37784B009FF2FD /* WorldOfPAYBACKNetworking */ = {isa = PBXFileReference; lastKnownFileType = text; path = WorldOfPAYBACKNetworking; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +95,7 @@
 		3042DC7D2B3769B0009FF2FD /* WorldOfPAYBACK */ = {
 			isa = PBXGroup;
 			children = (
+				3042DCAA2B3777B2009FF2FD /* Networking */,
 				3042DC7E2B3769B0009FF2FD /* WorldOfPAYBACKApp.swift */,
 				3042DC802B3769B0009FF2FD /* ContentView.swift */,
 				3042DC822B3769B2009FF2FD /* Assets.xcassets */,
@@ -125,6 +127,14 @@
 				3042DC9B2B3769B3009FF2FD /* WorldOfPAYBACKUITestsLaunchTests.swift */,
 			);
 			path = WorldOfPAYBACKUITests;
+			sourceTree = "<group>";
+		};
+		3042DCAA2B3777B2009FF2FD /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3042DCAB2B37784B009FF2FD /* WorldOfPAYBACKNetworking */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
