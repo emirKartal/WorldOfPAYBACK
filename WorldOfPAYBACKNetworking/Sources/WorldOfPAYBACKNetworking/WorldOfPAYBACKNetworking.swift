@@ -11,8 +11,6 @@ public final class URLSessionHTTPClient: HTTPClientProtocol {
     private let session: URLSession
     public let baseURL: String
     
-    typealias RequestModifier = ((URLRequest) -> URLRequest)
-    
     public init(baseURL: String = ProcessInfo.processInfo.environment["base-url"] ?? "",
                 session: URLSession = .shared) {
         self.session = session
