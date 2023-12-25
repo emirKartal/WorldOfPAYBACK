@@ -45,6 +45,7 @@
 		3042DC992B3769B3009FF2FD /* WorldOfPAYBACKUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPAYBACKUITests.swift; sourceTree = "<group>"; };
 		3042DC9B2B3769B3009FF2FD /* WorldOfPAYBACKUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPAYBACKUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3042DCAB2B37784B009FF2FD /* WorldOfPAYBACKNetworking */ = {isa = PBXFileReference; lastKnownFileType = text; path = WorldOfPAYBACKNetworking; sourceTree = SOURCE_ROOT; };
+		30A6B4112B3908B70080ABC7 /* WorldOfPAYBACK - QA.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "WorldOfPAYBACK - QA.xctestplan"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,7 @@
 		3042DC722B3769B0009FF2FD = {
 			isa = PBXGroup;
 			children = (
+				30A6B4112B3908B70080ABC7 /* WorldOfPAYBACK - QA.xctestplan */,
 				3042DC7D2B3769B0009FF2FD /* WorldOfPAYBACK */,
 				3042DC8E2B3769B3009FF2FD /* WorldOfPAYBACKTests */,
 				3042DC982B3769B3009FF2FD /* WorldOfPAYBACKUITests */,

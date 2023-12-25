@@ -1,0 +1,41 @@
+{
+  "configurations" : [
+    {
+      "id" : "B639BFE0-E3F6-441D-8513-7341B0BFCA58",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "environmentVariableEntries" : [
+      {
+        "key" : "base-url",
+        "value" : "https:\/\/api-test.payback.com"
+      }
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:WorldOfPAYBACK.xcodeproj",
+      "identifier" : "3042DC7A2B3769B0009FF2FD",
+      "name" : "WorldOfPAYBACK"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:WorldOfPAYBACK.xcodeproj",
+        "identifier" : "3042DC8A2B3769B3009FF2FD",
+        "name" : "WorldOfPAYBACKTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:WorldOfPAYBACKNetworking",
+        "identifier" : "WorldOfPAYBACKNetworkingTests",
+        "name" : "WorldOfPAYBACKNetworkingTests"
+      }
+    }
+  ],
+  "version" : 1
+}
