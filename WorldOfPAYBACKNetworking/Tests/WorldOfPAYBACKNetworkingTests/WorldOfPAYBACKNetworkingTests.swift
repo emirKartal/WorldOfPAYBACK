@@ -7,12 +7,14 @@ final class WorldOfPAYBACKNetworkingTests: XCTestCase {
     private var cancelBag = Set<AnyCancellable>()
     
     override func setUp() {
+        super.setUp()
         cancelBag.forEach { $0.cancel() }
         cancelBag.removeAll()
     }
     
     func test_invalidBaseUrl_getInvalidUrlError() {
         let (sut, _) = makeSUT(baseURL: "")
+        let exp = expectation(description: "loading")
         sut.getTransactions()
             .sinkToResult { result in
                 switch result {
@@ -20,14 +22,17 @@ final class WorldOfPAYBACKNetworkingTests: XCTestCase {
                     XCTFail("Shouldnt get success result")
                 case .failure(let error):
                     XCTAssertEqual(error, .invalidURL)
+                    exp.fulfill()
                 }
             }
             .store(in: &cancelBag)
+        wait(for: [exp], timeout: 1.0)
     }
     
     func test_validUrl_getProperData() {
         let (sut, _) = makeSUT()
         
+        let exp = expectation(description: "loading")
         sut.getTransactions()
             .sinkToResult { result in
                 switch result {
@@ -35,11 +40,13 @@ final class WorldOfPAYBACKNetworkingTests: XCTestCase {
                     let transactionItems = rootTransaction.items
                     XCTAssertEqual(transactionItems.count, 21)
                     XCTAssertEqual(transactionItems.first?.partnerDisplayName, "REWE Group")
+                    exp.fulfill()
                 case .failure:
                     XCTFail("Shouldnt get failure result")
                 }
             }
             .store(in: &cancelBag)
+        wait(for: [exp], timeout: 1.0)
     }
     
     func test_apiCall_properCount() {
@@ -64,12 +71,14 @@ final class WorldOfPAYBACKNetworkingTests: XCTestCase {
     
     // MARK: Helpers
     
-    private func makeSUT(baseURL: String = "https://api-test.payback.com") -> (sut: TransactionDataLoader, client: HTTPClientSpy) {
+    private func makeSUT(baseURL: String = "https://api-test.payback.com",
+                         file: StaticString = #filePath,
+                         line: UInt = #line) -> (sut: TransactionDataLoader, client: HTTPClientSpy) {
         let client = HTTPClientSpy(baseURL: baseURL)
         let sut = TransactionDataLoader(client: client)
         defer {
-            trackForMemoryLeak(client)
-            trackForMemoryLeak(sut)
+            trackForMemoryLeak(client, file: file, line: line)
+            trackForMemoryLeak(sut, file: file, line: line)
         }
         return (sut, client)
     }
