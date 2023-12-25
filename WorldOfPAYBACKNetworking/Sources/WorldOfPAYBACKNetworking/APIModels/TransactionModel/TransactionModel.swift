@@ -12,7 +12,7 @@ public struct RootTransactionModel: Decodable {
 }
 
 public struct TransactionModel: Decodable {
-    public let partnerDisplayNAme: String
+    public let partnerDisplayName: String
     public let alias: Alias
     public let category: Int
     public let transactionDetail: TransactionDetail
@@ -22,7 +22,7 @@ public struct TransactionModel: Decodable {
     }
 
     public struct TransactionDetail: Decodable {
-        public let description: String
+        public let description: String?
         public let bookingDate: String
         public let value: TransactionValue
 

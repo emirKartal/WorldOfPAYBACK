@@ -12,12 +12,7 @@ final class WorldOfPAYBACKNetworkingTests: XCTestCase {
     }
     
     func test_invalidBaseUrl_getInvalidUrlError() {
-        let client = HTTPClientSpy()
-        let sut = TransactionDataLoader(client: client)
-        defer {
-            trackForMemoryLeak(client)
-            trackForMemoryLeak(sut)
-        }
+        let sut = makeSUT(baseURL: "")
         sut.getTransactions()
             .sinkToResult { result in
                 switch result {
@@ -30,10 +25,31 @@ final class WorldOfPAYBACKNetworkingTests: XCTestCase {
             .store(in: &cancelBag)
     }
     
+    func test_validUrl_getProperData() {
+        let sut = makeSUT()
+        sut.getTransactions()
+            .sinkToResult { result in
+                switch result {
+                case .success(let rootTransaction):
+                    let transactionItems = rootTransaction.items
+                    XCTAssertEqual(transactionItems.count, 21)
+                case .failure:
+                    XCTFail("Shouldnt get failure result")
+                }
+            }
+            .store(in: &cancelBag)
+    }
+    
     // MARK: Helpers
     
-    private func createSUT() {
-        
+    private func makeSUT(baseURL: String = "https://api-test.payback.com/transactions") -> TransactionDataLoader {
+        let client = HTTPClientSpy(baseURL: baseURL)
+        let sut = TransactionDataLoader(client: client)
+        defer {
+            trackForMemoryLeak(client)
+            trackForMemoryLeak(sut)
+        }
+        return sut
     }
     
     private class HTTPClientSpy: HTTPClientProtocol {
@@ -53,21 +69,6 @@ final class WorldOfPAYBACKNetworkingTests: XCTestCase {
             } catch {
                 return Fail(error: APIError.decodingFailed).eraseToAnyPublisher()
             }
-        }
-    }
-}
-
-extension Publisher {
-    func sinkToResult(_ result: @escaping (Result<Self.Output, Self.Failure>) -> Void) -> AnyCancellable {
-        sink { completion in
-            switch completion {
-            case .failure(let error):
-                result(.failure(error))
-            case .finished:
-                break
-            }
-        } receiveValue: { value in
-            result(.success(value))
         }
     }
 }

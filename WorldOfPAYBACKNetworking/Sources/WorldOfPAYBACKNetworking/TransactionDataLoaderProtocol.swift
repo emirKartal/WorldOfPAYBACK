@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 public protocol TransactionDataLoaderProtocol {
-    func getTransactions() -> AnyPublisher<[TransactionModel], APIError>
+    func getTransactions() -> AnyPublisher<RootTransactionModel, APIError>
 }
 
 public final class TransactionDataLoader: TransactionDataLoaderProtocol {
@@ -20,7 +20,7 @@ public final class TransactionDataLoader: TransactionDataLoaderProtocol {
         self.client = client
     }
     
-    public func getTransactions() -> AnyPublisher<[TransactionModel], APIError> {
+    public func getTransactions() -> AnyPublisher<RootTransactionModel, APIError> {
         return client.get(endpoint: TransactionEndpoints.transactions)
     }
 }

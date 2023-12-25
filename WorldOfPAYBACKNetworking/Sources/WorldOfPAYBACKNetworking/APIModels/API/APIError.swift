@@ -56,7 +56,7 @@ public enum TransactionEndpoints: ServiceEndpointsProtocol {
     }
     
     public var mockData: Data? {
-        guard let url = Bundle.main.url(forResource: "TransactionsMock", withExtension: "json"),
+        guard let url = Bundle.module.url(forResource: "PBTransactions", withExtension: "json"),
               let data = try? Data(contentsOf: url) else { return nil }
         return data
     }
