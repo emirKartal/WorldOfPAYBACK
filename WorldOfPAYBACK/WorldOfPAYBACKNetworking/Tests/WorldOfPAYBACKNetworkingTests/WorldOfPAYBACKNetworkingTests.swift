@@ -40,6 +40,7 @@ final class WorldOfPAYBACKNetworkingTests: XCTestCase {
                     let transactionItems = rootTransaction.items
                     XCTAssertEqual(transactionItems.count, 21)
                     XCTAssertEqual(transactionItems.first?.partnerDisplayName, "REWE Group")
+                    XCTAssertNotNil(transactionItems.first?.transactionDetail.bookingDate)
                     exp.fulfill()
                 case .failure:
                     XCTFail("Shouldnt get failure result")

@@ -21,7 +21,7 @@ enum Decoders {
 }
 
 enum DateFormatsInApp: String {
-    case apiDateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+    case apiDateFormat = "yyyy-MM-dd'T'HH:mm:ssZ" // "2022-06-23T10:59:05+0200"
     case uiDateFormat = "dd/MM/yyyy, HH:mm"
 }
 

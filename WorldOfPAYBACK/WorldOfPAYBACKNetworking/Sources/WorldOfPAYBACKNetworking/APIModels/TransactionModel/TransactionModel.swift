@@ -23,7 +23,7 @@ public struct TransactionModel: Decodable {
 
     public struct TransactionDetail: Decodable {
         public let description: String?
-        public let bookingDate: String
+        public let bookingDate: Date
         public let value: TransactionValue
 
         public struct TransactionValue: Decodable {

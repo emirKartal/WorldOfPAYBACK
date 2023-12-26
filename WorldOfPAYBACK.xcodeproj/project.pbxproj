@@ -14,6 +14,11 @@
 		3042DC902B3769B3009FF2FD /* WorldOfPAYBACKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042DC8F2B3769B3009FF2FD /* WorldOfPAYBACKTests.swift */; };
 		3042DC9A2B3769B3009FF2FD /* WorldOfPAYBACKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042DC992B3769B3009FF2FD /* WorldOfPAYBACKUITests.swift */; };
 		3042DC9C2B3769B3009FF2FD /* WorldOfPAYBACKUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042DC9B2B3769B3009FF2FD /* WorldOfPAYBACKUITestsLaunchTests.swift */; };
+		30D1DEAD2B3B13DF00FD2278 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1DEAC2B3B13DF00FD2278 /* MainView.swift */; };
+		30D1DEB12B3B175800FD2278 /* OnlineShoppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1DEB02B3B175800FD2278 /* OnlineShoppingView.swift */; };
+		30D1DEB52B3B17D300FD2278 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1DEB42B3B17D300FD2278 /* TransactionsView.swift */; };
+		30D1DEB72B3B17EC00FD2278 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1DEB62B3B17EC00FD2278 /* FeedView.swift */; };
+		30D1DEB92B3B181500FD2278 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1DEB82B3B181500FD2278 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,11 @@
 		3042DC9B2B3769B3009FF2FD /* WorldOfPAYBACKUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPAYBACKUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3042DCAB2B37784B009FF2FD /* WorldOfPAYBACKNetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = WorldOfPAYBACKNetworking; path = WorldOfPAYBACK/WorldOfPAYBACKNetworking; sourceTree = SOURCE_ROOT; };
 		30A6B4112B3908B70080ABC7 /* WorldOfPAYBACK - QA.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "WorldOfPAYBACK - QA.xctestplan"; sourceTree = "<group>"; };
+		30D1DEAC2B3B13DF00FD2278 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		30D1DEB02B3B175800FD2278 /* OnlineShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineShoppingView.swift; sourceTree = "<group>"; };
+		30D1DEB42B3B17D300FD2278 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
+		30D1DEB62B3B17EC00FD2278 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		30D1DEB82B3B181500FD2278 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,11 @@
 			children = (
 				3042DCAB2B37784B009FF2FD /* WorldOfPAYBACKNetworking */,
 				3042DC7E2B3769B0009FF2FD /* WorldOfPAYBACKApp.swift */,
+				30D1DEAB2B3B13C300FD2278 /* MainView */,
+				30D1DEAE2B3B14F900FD2278 /* Transactions */,
+				30D1DEB22B3B177C00FD2278 /* Feed */,
+				30D1DEAF2B3B152600FD2278 /* OnlineShopping */,
+				30D1DEB32B3B179900FD2278 /* Settings */,
 				3042DC802B3769B0009FF2FD /* ContentView.swift */,
 				3042DC822B3769B2009FF2FD /* Assets.xcassets */,
 				3042DC842B3769B2009FF2FD /* Preview Content */,
@@ -129,6 +144,46 @@
 				3042DC9B2B3769B3009FF2FD /* WorldOfPAYBACKUITestsLaunchTests.swift */,
 			);
 			path = WorldOfPAYBACKUITests;
+			sourceTree = "<group>";
+		};
+		30D1DEAB2B3B13C300FD2278 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				30D1DEAC2B3B13DF00FD2278 /* MainView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		30D1DEAE2B3B14F900FD2278 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				30D1DEB42B3B17D300FD2278 /* TransactionsView.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		30D1DEAF2B3B152600FD2278 /* OnlineShopping */ = {
+			isa = PBXGroup;
+			children = (
+				30D1DEB02B3B175800FD2278 /* OnlineShoppingView.swift */,
+			);
+			path = OnlineShopping;
+			sourceTree = "<group>";
+		};
+		30D1DEB22B3B177C00FD2278 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				30D1DEB62B3B17EC00FD2278 /* FeedView.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		30D1DEB32B3B179900FD2278 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				30D1DEB82B3B181500FD2278 /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,8 +316,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30D1DEB92B3B181500FD2278 /* SettingsView.swift in Sources */,
+				30D1DEB52B3B17D300FD2278 /* TransactionsView.swift in Sources */,
 				3042DC812B3769B0009FF2FD /* ContentView.swift in Sources */,
+				30D1DEAD2B3B13DF00FD2278 /* MainView.swift in Sources */,
 				3042DC7F2B3769B0009FF2FD /* WorldOfPAYBACKApp.swift in Sources */,
+				30D1DEB72B3B17EC00FD2278 /* FeedView.swift in Sources */,
+				30D1DEB12B3B175800FD2278 /* OnlineShoppingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +495,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,6 +530,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
