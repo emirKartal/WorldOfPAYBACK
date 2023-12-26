@@ -20,7 +20,6 @@ let package = Package(
         .target(
             name: "WorldOfPAYBACKNetworking",
             resources: [
-                .process("Resources"),
                 .copy("PBTransactions.json")
             ]),
         .testTarget(
