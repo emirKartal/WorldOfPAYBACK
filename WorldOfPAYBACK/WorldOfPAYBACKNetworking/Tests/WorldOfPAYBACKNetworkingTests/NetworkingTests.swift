@@ -26,14 +26,14 @@ final class NetworkingTests: XCTestCase {
     }
     
     func test_getFromURL_performsGETRequestWithURL() {
-        let url = baseURL()
+        let url = requestURL()
         let exp = expectation(description: "loading")
         URLProtocolStub.observeRequest { request in
             XCTAssertEqual(request.url, url)
             XCTAssertEqual(request.httpMethod, "GET")
             exp.fulfill()
         }
-        let sut = makeSUT()
+        let sut = makeSUT(baseURL: "https://api-test.payback.com")
         let publisher: AnyPublisher<RootTransactionModel, APIError> = sut.get(endpoint: TransactionEndpoints.transactions)
         publisher
             .sinkToResult { _ in }
@@ -43,13 +43,13 @@ final class NetworkingTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> HTTPClientProtocol {
-        let sut = URLSessionHTTPClient()
+    private func makeSUT(baseURL: String, file: StaticString = #filePath, line: UInt = #line) -> HTTPClientProtocol {
+        let sut = URLSessionHTTPClient(baseURL: baseURL)
         trackForMemoryLeak(sut, file: file, line: line)
         return sut
     }
     
-    private func baseURL() -> URL {
+    private func requestURL() -> URL {
         URL(string: "https://api-test.payback.com/transactions")!
     }
     
