@@ -82,7 +82,16 @@
             value = "https://api-test.payback.com"
             isEnabled = "YES">
          </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "TZ"
+            value = "CST"
+            isEnabled = "NO">
+         </EnvironmentVariable>
       </EnvironmentVariables>
+      <LocationScenarioReference
+         identifier = "com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier"
+         referenceType = "1">
+      </LocationScenarioReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

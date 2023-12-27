@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3032D8712B3C4BF400655F3F /* TransactionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032D8702B3C4BF400655F3F /* TransactionItemView.swift */; };
+		3032D8732B3C4C2200655F3F /* TransactionItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032D8722B3C4C2200655F3F /* TransactionItemViewModel.swift */; };
 		3042DC7F2B3769B0009FF2FD /* WorldOfPAYBACKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042DC7E2B3769B0009FF2FD /* WorldOfPAYBACKApp.swift */; };
 		3042DC832B3769B2009FF2FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3042DC822B3769B2009FF2FD /* Assets.xcassets */; };
 		3042DC862B3769B2009FF2FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3042DC852B3769B2009FF2FD /* Preview Assets.xcassets */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3032D8702B3C4BF400655F3F /* TransactionItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItemView.swift; sourceTree = "<group>"; };
+		3032D8722B3C4C2200655F3F /* TransactionItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItemViewModel.swift; sourceTree = "<group>"; };
 		3042DC7B2B3769B0009FF2FD /* WorldOfPAYBACK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfPAYBACK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3042DC7E2B3769B0009FF2FD /* WorldOfPAYBACKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPAYBACKApp.swift; sourceTree = "<group>"; };
 		3042DC822B3769B2009FF2FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3032D86D2B3C4B9F00655F3F /* TransactionItem */ = {
+			isa = PBXGroup;
+			children = (
+				3032D8702B3C4BF400655F3F /* TransactionItemView.swift */,
+				3032D8722B3C4C2200655F3F /* TransactionItemViewModel.swift */,
+			);
+			path = TransactionItem;
+			sourceTree = "<group>";
+		};
 		3042DC722B3769B0009FF2FD = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +209,7 @@
 		30D1DEBC2B3B2B5A00FD2278 /* TransactionList */ = {
 			isa = PBXGroup;
 			children = (
+				3032D86D2B3C4B9F00655F3F /* TransactionItem */,
 				30D1DEB42B3B17D300FD2278 /* TransactionsView.swift */,
 				30D1DEBA2B3B2A7200FD2278 /* TransactionPresentationModel.swift */,
 				30D1DEBD2B3B546700FD2278 /* TransactionsViewModel.swift */,
@@ -357,6 +371,8 @@
 				30D1DEB52B3B17D300FD2278 /* TransactionsView.swift in Sources */,
 				30D1DEAD2B3B13DF00FD2278 /* MainView.swift in Sources */,
 				30D1DEC42B3BA71900FD2278 /* DateExtensions.swift in Sources */,
+				3032D8732B3C4C2200655F3F /* TransactionItemViewModel.swift in Sources */,
+				3032D8712B3C4BF400655F3F /* TransactionItemView.swift in Sources */,
 				3042DC7F2B3769B0009FF2FD /* WorldOfPAYBACKApp.swift in Sources */,
 				30D1DEB72B3B17EC00FD2278 /* FeedView.swift in Sources */,
 				30D1DEB12B3B175800FD2278 /* OnlineShoppingView.swift in Sources */,
