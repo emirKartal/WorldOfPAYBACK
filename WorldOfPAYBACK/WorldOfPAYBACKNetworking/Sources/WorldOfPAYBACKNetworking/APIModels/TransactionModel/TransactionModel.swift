@@ -9,6 +9,9 @@ import Foundation
 
 public struct RootTransactionModel: Decodable {
     public let items: [TransactionModel]
+    public var sortedItems: [TransactionModel] {
+        items.sorted(by: { $0.transactionDetail.bookingDate > $1.transactionDetail.bookingDate })
+    }
 }
 
 public struct TransactionModel: Decodable {

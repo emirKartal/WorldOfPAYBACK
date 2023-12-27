@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 extension Publisher {
-    func sinkToResult(_ result: @escaping (Result<Self.Output, Self.Failure>) -> Void) -> AnyCancellable {
+    public func sinkToResult(_ result: @escaping (Result<Self.Output, Self.Failure>) -> Void) -> AnyCancellable {
         sink { completion in
             switch completion {
             case .failure(let error):

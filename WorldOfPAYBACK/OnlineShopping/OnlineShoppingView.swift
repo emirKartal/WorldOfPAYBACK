@@ -9,7 +9,13 @@ import SwiftUI
 
 struct OnlineShoppingView: View {
     var body: some View {
-        Text("Online Shopping View")
+        NavigationView {
+            VStack {
+                
+            }
+            .navigationTitle("Shopping")
+            
+        }
     }
 }
 
