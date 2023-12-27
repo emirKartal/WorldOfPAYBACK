@@ -15,7 +15,25 @@ struct TransactionsView: View {
         NavigationView {
             List(viewModel.transactions, id: \.id) { transaction in
                 VStack {
-                    Text(transaction.partnerDisplayName)
+                    HStack {
+                        Text(transaction.partnerDisplayName)
+                            .fontWeight(.bold)
+                            .font(.title3)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.top, 5)
+                            .padding(.bottom, 5)
+                            .lineLimit(1)
+                        Text(transaction.amountWithCurreny)
+                            .fontWeight(.bold)
+                    }
+                    HStack {
+                        Text(transaction.transactionDetailDescription ?? "")
+                            .font(.system(size: 15))
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .lineLimit(1)
+                        Text(transaction.bookingDateString)
+                            .font(.system(size: 13))
+                    }
                 }
             }
             .navigationTitle("Transactions")

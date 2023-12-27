@@ -7,10 +7,6 @@
 
 import Foundation
 
-struct RootTransactionPresentationModel {
-    let transactions: [TransactionPresentationModel]
-}
-
 struct TransactionPresentationModel: Identifiable {
     let id: UUID
     let partnerDisplayName: String
@@ -19,4 +15,12 @@ struct TransactionPresentationModel: Identifiable {
     let transactionDetailBookingDate: Date
     let amount: Int
     let currency: String
+    
+    var amountWithCurreny: String {
+        "\(amount) \(currency)"
+    }
+    
+    var bookingDateString: String {
+        transactionDetailBookingDate.convertToString(format: .uiDateFormat)
+    }
 }
