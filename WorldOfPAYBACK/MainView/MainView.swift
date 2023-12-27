@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MainView: View {
+    @EnvironmentObject var connectionChecker: InternetConnectionChecker
+    @State private var showNetworkAlert = false
+    
     var body: some View {
         TabView {
             TransactionsView()
@@ -30,6 +33,15 @@ struct MainView: View {
                     Image(systemName: "gear")
                     Text("Settings")
                 }
+        }.onChange(of: connectionChecker.isConnected) { connection in
+            showNetworkAlert = connection == false
+        }
+        .alert(isPresented: $showNetworkAlert) {
+            Alert(
+                title: Text("Internet Connection"),
+                message: Text("Network connection seems to be offline. Please check your connection!"),
+                dismissButton: .default(Text("Close"))
+            )
         }
     }
 }

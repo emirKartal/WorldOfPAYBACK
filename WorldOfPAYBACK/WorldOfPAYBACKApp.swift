@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct WorldOfPAYBACKApp: App {
+    @StateObject var networkMonitor = InternetConnectionChecker()
+    
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(networkMonitor)
         }
     }
 }
