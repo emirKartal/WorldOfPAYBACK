@@ -30,8 +30,16 @@ public final class TransactionDataLoader: TransactionDataLoaderProtocol {
         guard let mockData = TransactionEndpoints.transactions.mockData else {
             return Fail(error: APIError.invalidURL).eraseToAnyPublisher()
         }
+        if true { //Bool.random()
+            return createMock(data: mockData)
+        } else {
+            return Fail(error: APIError.requestFailed("Error occured when getting data")).eraseToAnyPublisher()
+        }
+    }
+    
+    private func createMock(data: Data) -> AnyPublisher<RootTransactionModel, APIError> {
         do {
-            let transactionList = try Decoders.mainDecoder.decode(RootTransactionModel.self, from: mockData)
+            let transactionList = try Decoders.mainDecoder.decode(RootTransactionModel.self, from: data)
             return Just(transactionList)
                     .setFailureType(to: APIError.self)
                     .eraseToAnyPublisher()

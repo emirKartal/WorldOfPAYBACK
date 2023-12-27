@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3032D8712B3C4BF400655F3F /* TransactionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032D8702B3C4BF400655F3F /* TransactionItemView.swift */; };
 		3032D8732B3C4C2200655F3F /* TransactionItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032D8722B3C4C2200655F3F /* TransactionItemViewModel.swift */; };
+		3032D8782B3C77B000655F3F /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032D8772B3C77B000655F3F /* ViewExtensions.swift */; };
+		3032D87B2B3C964600655F3F /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032D87A2B3C964600655F3F /* LoaderView.swift */; };
 		3042DC7F2B3769B0009FF2FD /* WorldOfPAYBACKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042DC7E2B3769B0009FF2FD /* WorldOfPAYBACKApp.swift */; };
 		3042DC832B3769B2009FF2FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3042DC822B3769B2009FF2FD /* Assets.xcassets */; };
 		3042DC862B3769B2009FF2FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3042DC852B3769B2009FF2FD /* Preview Assets.xcassets */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		3032D8702B3C4BF400655F3F /* TransactionItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItemView.swift; sourceTree = "<group>"; };
 		3032D8722B3C4C2200655F3F /* TransactionItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItemViewModel.swift; sourceTree = "<group>"; };
+		3032D8772B3C77B000655F3F /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		3032D87A2B3C964600655F3F /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		3042DC7B2B3769B0009FF2FD /* WorldOfPAYBACK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfPAYBACK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3042DC7E2B3769B0009FF2FD /* WorldOfPAYBACKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPAYBACKApp.swift; sourceTree = "<group>"; };
 		3042DC822B3769B2009FF2FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,6 +106,14 @@
 			path = TransactionItem;
 			sourceTree = "<group>";
 		};
+		3032D8792B3C963700655F3F /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				3032D87A2B3C964600655F3F /* LoaderView.swift */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
 		3042DC722B3769B0009FF2FD = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +141,7 @@
 			children = (
 				3042DCAB2B37784B009FF2FD /* WorldOfPAYBACKNetworking */,
 				3042DC7E2B3769B0009FF2FD /* WorldOfPAYBACKApp.swift */,
+				3032D8792B3C963700655F3F /* CommonViews */,
 				30D1DEAB2B3B13C300FD2278 /* MainView */,
 				30D1DEAE2B3B14F900FD2278 /* Transactions */,
 				30D1DEB22B3B177C00FD2278 /* Feed */,
@@ -228,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				30D1DEC32B3BA71900FD2278 /* DateExtensions.swift */,
+				3032D8772B3C77B000655F3F /* ViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -368,6 +382,7 @@
 				30D1DEBB2B3B2A7200FD2278 /* TransactionPresentationModel.swift in Sources */,
 				30D1DEBE2B3B546700FD2278 /* TransactionsViewModel.swift in Sources */,
 				30D1DEB92B3B181500FD2278 /* SettingsView.swift in Sources */,
+				3032D87B2B3C964600655F3F /* LoaderView.swift in Sources */,
 				30D1DEB52B3B17D300FD2278 /* TransactionsView.swift in Sources */,
 				30D1DEAD2B3B13DF00FD2278 /* MainView.swift in Sources */,
 				30D1DEC42B3BA71900FD2278 /* DateExtensions.swift in Sources */,
@@ -375,6 +390,7 @@
 				3032D8712B3C4BF400655F3F /* TransactionItemView.swift in Sources */,
 				3042DC7F2B3769B0009FF2FD /* WorldOfPAYBACKApp.swift in Sources */,
 				30D1DEB72B3B17EC00FD2278 /* FeedView.swift in Sources */,
+				3032D8782B3C77B000655F3F /* ViewExtensions.swift in Sources */,
 				30D1DEB12B3B175800FD2278 /* OnlineShoppingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

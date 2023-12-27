@@ -13,15 +13,19 @@ struct TransactionsView: View {
     
     var body: some View {
         NavigationView {
-            List(viewModel.transactions, id: \.id) { transaction in
-                TransactionItemView(
-                    itemCellModel: TransactionItemViewModel(
-                        partnerName: transaction.partnerDisplayName,
-                        description: transaction.transactionDetailDescription,
-                        bookingDate: transaction.bookingDateString,
-                        amount: transaction.amountWithCurreny))
+            ZStack {
+                List(viewModel.transactions, id: \.id) { transaction in
+                    TransactionItemView(
+                            itemCellModel: TransactionItemViewModel(
+                            partnerName: transaction.partnerDisplayName,
+                            description: transaction.transactionDetailDescription,
+                            bookingDate: transaction.bookingDateString,
+                            amount: transaction.amountWithCurreny))
+                }
+                LoaderView().hidden(!viewModel.isLoading)
             }
             .navigationTitle("Transactions")
+            .apiErrorAlert(error: $viewModel.showError)
         }
         .onAppear(perform: {
             viewModel.getTransactions()
