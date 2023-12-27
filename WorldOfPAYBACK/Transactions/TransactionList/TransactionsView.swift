@@ -15,12 +15,20 @@ struct TransactionsView: View {
         NavigationView {
             ZStack {
                 List(viewModel.transactions, id: \.id) { transaction in
-                    TransactionItemView(
-                            itemCellModel: TransactionItemViewModel(
-                            partnerName: transaction.partnerDisplayName,
-                            description: transaction.transactionDetailDescription,
-                            bookingDate: transaction.bookingDateString,
-                            amount: transaction.amountWithCurreny))
+                    NavigationLink {
+                        TransactionDetailView(
+                            viewModel: TransactionDetailViewModel(
+                                partnerName: transaction.partnerDisplayName,
+                                description: transaction.transactionDetailDescription))
+                    } label: {
+                        TransactionItemView(
+                                itemCellModel: TransactionItemViewModel(
+                                partnerName: transaction.partnerDisplayName,
+                                description: transaction.transactionDetailDescription,
+                                bookingDate: transaction.bookingDateString,
+                                amount: transaction.amountWithCurreny))
+                    }
+
                 }
                 LoaderView().hidden(!viewModel.isLoading)
             }
