@@ -14,6 +14,7 @@ class TransactionsViewModel: ObservableObject {
     private let client: TransactionDataLoaderProtocol
     private var cancelBag = Set<AnyCancellable>()
     private var unFilteredTransactions: [TransactionPresentationModel] = []
+    var categories: Set<Int> = []
     
     @Published var transactions: [TransactionPresentationModel] = []
     @Published var transactionsTotal: String = ""
@@ -35,6 +36,7 @@ class TransactionsViewModel: ObservableObject {
                 switch result {
                 case .success(let rootTransaction):
                     unFilteredTransactions = convertToPresentationModel(rootTransaction.sortedItems)
+                    categories = Set(unFilteredTransactions.map({ $0.category}))
                     transactions = unFilteredTransactions
                 case .failure(let error):
                     showError = error

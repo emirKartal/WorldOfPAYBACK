@@ -44,8 +44,8 @@ struct TransactionsView: View {
                 }
                 .padding(.trailing, 5)
                 .sheet(isPresented: $showCategories, content: {
-                    CategoriesView(onDismiss: viewModel.callbackFrom,
-                                   categories: [1, 2, 3])
+                    CategoriesView(categories: viewModel.categories,
+                                   onDismiss: viewModel.callbackFrom)
                 })
             }
             .apiErrorAlert(error: $viewModel.showError)

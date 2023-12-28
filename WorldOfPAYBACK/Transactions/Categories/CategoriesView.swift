@@ -9,8 +9,8 @@ import SwiftUI
 
 struct CategoriesView: View {
     
+    var categories: Set<Int>
     var onDismiss: (_ category: Int?) -> Void
-    var categories: [Int] = [1,2,3]
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -19,7 +19,7 @@ struct CategoriesView: View {
                 .font(.title)
                 .padding(.top, 20)
             
-            List(categories, id: \.self) { category in
+            List(Array(categories).sorted(by: <), id: \.self) { category in
                 Button {
                     onDismiss(category)
                     dismiss()
@@ -41,7 +41,7 @@ struct CategoriesView: View {
 }
 
 #Preview {
-    CategoriesView { category in
+    CategoriesView(categories: [1,2,3]) { category in
         
     }
 }
