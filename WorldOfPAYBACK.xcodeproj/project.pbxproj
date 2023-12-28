@@ -14,6 +14,8 @@
 		3032D87E2B3CB48000655F3F /* InternetConnectionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032D87D2B3CB48000655F3F /* InternetConnectionChecker.swift */; };
 		3032D8812B3CD48A00655F3F /* TransactionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032D8802B3CD48A00655F3F /* TransactionDetailViewModel.swift */; };
 		3032D8832B3CD49F00655F3F /* TransactionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032D8822B3CD49F00655F3F /* TransactionDetailView.swift */; };
+		3032D8862B3CF3C300655F3F /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032D8852B3CF3C200655F3F /* CategoriesView.swift */; };
+		3032D8882B3D00AF00655F3F /* TotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3032D8872B3D00AF00655F3F /* TotalView.swift */; };
 		3042DC7F2B3769B0009FF2FD /* WorldOfPAYBACKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042DC7E2B3769B0009FF2FD /* WorldOfPAYBACKApp.swift */; };
 		3042DC832B3769B2009FF2FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3042DC822B3769B2009FF2FD /* Assets.xcassets */; };
 		3042DC862B3769B2009FF2FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3042DC852B3769B2009FF2FD /* Preview Assets.xcassets */; };
@@ -56,6 +58,8 @@
 		3032D87D2B3CB48000655F3F /* InternetConnectionChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionChecker.swift; sourceTree = "<group>"; };
 		3032D8802B3CD48A00655F3F /* TransactionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewModel.swift; sourceTree = "<group>"; };
 		3032D8822B3CD49F00655F3F /* TransactionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailView.swift; sourceTree = "<group>"; };
+		3032D8852B3CF3C200655F3F /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		3032D8872B3D00AF00655F3F /* TotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalView.swift; sourceTree = "<group>"; };
 		3042DC7B2B3769B0009FF2FD /* WorldOfPAYBACK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfPAYBACK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3042DC7E2B3769B0009FF2FD /* WorldOfPAYBACKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPAYBACKApp.swift; sourceTree = "<group>"; };
 		3042DC822B3769B2009FF2FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				3032D87A2B3C964600655F3F /* LoaderView.swift */,
+				3032D8872B3D00AF00655F3F /* TotalView.swift */,
 			);
 			path = CommonViews;
 			sourceTree = "<group>";
@@ -135,6 +140,14 @@
 				3032D8802B3CD48A00655F3F /* TransactionDetailViewModel.swift */,
 			);
 			path = TransactionDetail;
+			sourceTree = "<group>";
+		};
+		3032D8842B3CF3A700655F3F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3032D8852B3CF3C200655F3F /* CategoriesView.swift */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		3042DC722B3769B0009FF2FD = {
@@ -214,6 +227,7 @@
 		30D1DEAE2B3B14F900FD2278 /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
+				3032D8842B3CF3A700655F3F /* Categories */,
 				30D1DEBC2B3B2B5A00FD2278 /* TransactionList */,
 			);
 			path = Transactions;
@@ -410,8 +424,10 @@
 				3032D87B2B3C964600655F3F /* LoaderView.swift in Sources */,
 				30D1DEB52B3B17D300FD2278 /* TransactionsView.swift in Sources */,
 				30D1DEAD2B3B13DF00FD2278 /* MainView.swift in Sources */,
+				3032D8862B3CF3C300655F3F /* CategoriesView.swift in Sources */,
 				30D1DEC42B3BA71900FD2278 /* DateExtensions.swift in Sources */,
 				3032D8812B3CD48A00655F3F /* TransactionDetailViewModel.swift in Sources */,
+				3032D8882B3D00AF00655F3F /* TotalView.swift in Sources */,
 				3032D8732B3C4C2200655F3F /* TransactionItemViewModel.swift in Sources */,
 				3032D87E2B3CB48000655F3F /* InternetConnectionChecker.swift in Sources */,
 				3032D8832B3CD49F00655F3F /* TransactionDetailView.swift in Sources */,

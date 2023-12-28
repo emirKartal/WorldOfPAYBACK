@@ -10,6 +10,7 @@ import SwiftUI
 struct TransactionsView: View {
     
     @StateObject private var viewModel: TransactionsViewModel = TransactionsViewModel()
+    @State private var showCategories = false
     
     var body: some View {
         NavigationView {
@@ -33,6 +34,20 @@ struct TransactionsView: View {
                 LoaderView().hidden(!viewModel.isLoading)
             }
             .navigationTitle("Transactions")
+            .toolbar {
+                TotalView(total: $viewModel.transactionsTotal)
+                    .hidden(viewModel.transactionsTotal.isEmpty)
+                Button {
+                    self.showCategories.toggle()
+                } label: {
+                    Image(systemName: "slider.vertical.3")
+                }
+                .padding(.trailing, 5)
+                .sheet(isPresented: $showCategories, content: {
+                    CategoriesView(onDismiss: viewModel.callbackFrom,
+                                   categories: [1, 2, 3])
+                })
+            }
             .apiErrorAlert(error: $viewModel.showError)
         }
         .onAppear(perform: {
