@@ -10,7 +10,7 @@ import Combine
 
 public protocol TransactionDataLoaderProtocol {
     func getTransactions() -> AnyPublisher<RootTransactionModel, APIError>
-    func simulateMockData() -> AnyPublisher<RootTransactionModel, APIError>
+    func simulateMockData(random: Bool) -> AnyPublisher<RootTransactionModel, APIError>
 }
 
 public final class TransactionDataLoader: TransactionDataLoaderProtocol {
@@ -26,11 +26,11 @@ public final class TransactionDataLoader: TransactionDataLoaderProtocol {
     }
     
     /// Use mock data until backend is ready!!!
-    public func simulateMockData() -> AnyPublisher<RootTransactionModel, APIError> {
+    public func simulateMockData(random: Bool) -> AnyPublisher<RootTransactionModel, APIError> {
         guard let mockData = TransactionEndpoints.transactions.mockData else {
             return Fail(error: APIError.invalidURL).eraseToAnyPublisher()
         }
-        if true { //Bool.random()
+        if random {
             return createMock(data: mockData)
         } else {
             return Fail(error: APIError.requestFailed("Error occured when getting data")).eraseToAnyPublisher()

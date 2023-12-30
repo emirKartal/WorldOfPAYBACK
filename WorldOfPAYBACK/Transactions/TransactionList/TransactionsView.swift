@@ -31,6 +31,9 @@ struct TransactionsView: View {
                     }
 
                 }
+                .refreshable {
+                    viewModel.getTransactions()
+                }
                 LoaderView().hidden(!viewModel.isLoading)
             }
             .navigationTitle("Transactions")
@@ -50,9 +53,6 @@ struct TransactionsView: View {
             }
             .apiErrorAlert(error: $viewModel.showError)
         }
-        .onAppear(perform: {
-            viewModel.getTransactions()
-        })
     }
 }
 

@@ -23,7 +23,7 @@ struct CategoriesView: View {
                 Button {
                     onDismiss(category)
                     dismiss()
-                }label: {
+                } label: {
                     Text("category \(category)")
                         .foregroundStyle(.black)
                 }

@@ -1,8 +1,8 @@
 //
-//  File.swift
-//  
+//  Extensions.swift
+//  WorldOfPAYBACKTests
 //
-//  Created by emir kartal on 25.12.2023.
+//  Created by emir kartal on 30.12.2023.
 //
 
 import XCTest
@@ -16,3 +16,4 @@ extension XCTestCase {
         }
     }
 }
+

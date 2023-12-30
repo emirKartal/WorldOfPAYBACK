@@ -23,12 +23,13 @@ class TransactionsViewModel: ObservableObject {
     
     init(client: TransactionDataLoaderProtocol = TransactionDataLoader(client: URLSessionHTTPClient())) {
         self.client = client
+        getTransactions(random: true)
     }
     
     // Public Functions
-    func getTransactions() {
+    func getTransactions(random: Bool = Bool.random()) {
         isLoading = true
-        client.simulateMockData()
+        client.simulateMockData(random: random)
             .delay(for: 1, scheduler: RunLoop.main)
             .sinkToResult { [weak self] result in
                 self?.isLoading = false
