@@ -26,7 +26,6 @@ final class WorldOfPAYBACKTests: XCTestCase {
         let transactions = sut.transactions
         let transactionTotal = sut.transactionsTotal
         let error = sut.showError
-        let isLoading = sut.isLoading
         
         XCTAssertEqual(categories, [])
         XCTAssertEqual(transactions, [])
@@ -95,7 +94,6 @@ final class WorldOfPAYBACKTests: XCTestCase {
         
         let exp1 = expectation(description: "loadingData")
         let exp2 = expectation(description: "filterData")
-        sut.getTransactions(random: true)
         sut.$transactions
             .dropFirst()
             .sink(receiveValue: { [weak sut] in
@@ -110,8 +108,12 @@ final class WorldOfPAYBACKTests: XCTestCase {
             })
             .store(in: &cancelBag)
         
-        
-        
+        sut.$transactionsTotal
+            .dropFirst()
+            .sink(receiveValue: {
+                XCTAssertEqual($0, "86 PBP")
+            })
+            .store(in: &cancelBag)
         wait(for: [exp1, exp2], timeout: 1.0)
     }
 

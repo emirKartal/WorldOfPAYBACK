@@ -46,16 +46,6 @@ class TransactionsViewModel: ObservableObject {
             .store(in: &cancelBag)
     }
     
-    func showFilteredListWithTotal(with category: Int) {
-        transactions = unFilteredTransactions.filter({ $0.category == category })
-        transactionsTotal = calculateTotalOfList(list: transactions)
-    }
-    
-    func clearFilter() {
-        transactions = unFilteredTransactions
-        transactionsTotal = ""
-    }
-    
     func callbackFrom(category: Int?) {
         guard let category else {
             clearFilter()
@@ -81,6 +71,16 @@ class TransactionsViewModel: ObservableObject {
             return ""
         }
         return "\(sum) \(list.first?.currency ?? "")"
+    }
+    
+    private func clearFilter() {
+        transactions = unFilteredTransactions
+        transactionsTotal = ""
+    }
+    
+    private func showFilteredListWithTotal(with category: Int) {
+        transactions = unFilteredTransactions.filter({ $0.category == category })
+        transactionsTotal = calculateTotalOfList(list: transactions)
     }
     
 }
