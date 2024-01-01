@@ -23,6 +23,7 @@
 		3042DC9A2B3769B3009FF2FD /* WorldOfPAYBACKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042DC992B3769B3009FF2FD /* WorldOfPAYBACKUITests.swift */; };
 		3042DC9C2B3769B3009FF2FD /* WorldOfPAYBACKUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042DC9B2B3769B3009FF2FD /* WorldOfPAYBACKUITestsLaunchTests.swift */; };
 		3045FB662B4051500040CCE3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3045FB652B4051500040CCE3 /* Extensions.swift */; };
+		3045FB712B4257110040CCE3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3045FB732B4257110040CCE3 /* Localizable.strings */; };
 		30D1DEAD2B3B13DF00FD2278 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1DEAC2B3B13DF00FD2278 /* MainView.swift */; };
 		30D1DEB12B3B175800FD2278 /* OnlineShoppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1DEB02B3B175800FD2278 /* OnlineShoppingView.swift */; };
 		30D1DEB52B3B17D300FD2278 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1DEB42B3B17D300FD2278 /* TransactionsView.swift */; };
@@ -72,6 +73,8 @@
 		3042DC9B2B3769B3009FF2FD /* WorldOfPAYBACKUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPAYBACKUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3042DCAB2B37784B009FF2FD /* WorldOfPAYBACKNetworking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = WorldOfPAYBACKNetworking; path = WorldOfPAYBACK/WorldOfPAYBACKNetworking; sourceTree = SOURCE_ROOT; };
 		3045FB652B4051500040CCE3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3045FB722B4257110040CCE3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3045FB742B4257200040CCE3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		30A6B4112B3908B70080ABC7 /* WorldOfPAYBACK - QA.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "WorldOfPAYBACK - QA.xctestplan"; sourceTree = "<group>"; };
 		30D1DEAC2B3B13DF00FD2278 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		30D1DEB02B3B175800FD2278 /* OnlineShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineShoppingView.swift; sourceTree = "<group>"; };
@@ -179,6 +182,7 @@
 			children = (
 				3042DCAB2B37784B009FF2FD /* WorldOfPAYBACKNetworking */,
 				3042DC7E2B3769B0009FF2FD /* WorldOfPAYBACKApp.swift */,
+				3045FB732B4257110040CCE3 /* Localizable.strings */,
 				3032D87C2B3CB45E00655F3F /* Commons */,
 				3032D8792B3C963700655F3F /* CommonViews */,
 				30D1DEAB2B3B13C300FD2278 /* MainView */,
@@ -385,6 +389,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 3042DC722B3769B0009FF2FD;
 			productRefGroup = 3042DC7C2B3769B0009FF2FD /* Products */;
@@ -404,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3042DC862B3769B2009FF2FD /* Preview Assets.xcassets in Resources */,
+				3045FB712B4257110040CCE3 /* Localizable.strings in Resources */,
 				3042DC832B3769B2009FF2FD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,12 +489,25 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		3045FB732B4257110040CCE3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3045FB722B4257110040CCE3 /* en */,
+				3045FB742B4257200040CCE3 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		3042DC9D2B3769B3009FF2FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -552,6 +571,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

@@ -36,7 +36,7 @@ struct TransactionsView: View {
                 }
                 LoaderView().hidden(!viewModel.isLoading)
             }
-            .navigationTitle("Transactions")
+            .navigationTitle("transactionsString")
             .toolbar {
                 TotalView(total: $viewModel.transactionsTotal)
                     .hidden(viewModel.transactionsTotal.isEmpty)
