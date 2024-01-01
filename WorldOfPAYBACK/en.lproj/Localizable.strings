@@ -7,3 +7,10 @@
 */
 
 "transactionsString" = "Transactions";
+"categoryFiltersString" = "Category Filters";
+"feedsString" = "Feeds";
+"shoppingString" = "Shopping";
+"settingsString" = "Settings";
+
+"internetConnectionAlertTitleString" = "Internet Connection";
+"internetConnectionAlertMessageString" = "Network connection seems to be offline. Please check your connection!";

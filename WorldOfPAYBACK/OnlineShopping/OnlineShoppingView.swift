@@ -13,7 +13,7 @@ struct OnlineShoppingView: View {
             VStack {
                 
             }
-            .navigationTitle("Shopping")
+            .navigationTitle("shoppingString")
             
         }
     }

@@ -13,8 +13,7 @@ struct FeedView: View {
             VStack {
                 
             }
-            .navigationTitle("Feeds")
-            
+            .navigationTitle("feedsString")
         }
     }
 }

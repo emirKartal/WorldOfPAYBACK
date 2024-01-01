@@ -7,3 +7,10 @@
 */
 
 "transactionsString" = "Transactions[DE]";
+"categoryFiltersString" = "Category Filters [DE]";
+"feedsString" = "Feeds [DE]";
+"shoppingString" = "Shopping [DE]";
+"settingsString" = "Settings [DE]";
+
+"internetConnectionAlertTitleString" = "Internet Connection [DE]";
+"internetConnectionAlertMessageString" = "Network connection seems to be offline. Please check your connection! [DE]";

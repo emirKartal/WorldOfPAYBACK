@@ -13,7 +13,7 @@ struct SettingsView: View {
             VStack {
                 
             }
-            .navigationTitle("Settings")
+            .navigationTitle("settingsString")
         }
     }
 }

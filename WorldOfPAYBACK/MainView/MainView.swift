@@ -16,30 +16,30 @@ struct MainView: View {
             TransactionsView()
                 .tabItem {
                     Image(systemName: "eurosign.arrow.circlepath")
-                    Text("Transactions")
+                    Text("transactionsString")
                 }
             FeedView()
                 .tabItem {
                     Image(systemName: "list.bullet")
-                    Text("Feed")
+                    Text("feedsString")
                 }
             OnlineShoppingView()
                 .tabItem {
                     Image(systemName: "bag")
-                    Text("Shopping")
+                    Text("shoppingString")
                 }
             SettingsView()
                 .tabItem {
                     Image(systemName: "gear")
-                    Text("Settings")
+                    Text("settingsString")
                 }
         }.onChange(of: connectionChecker.isConnected) { connection in
             showNetworkAlert = connection == false
         }
         .alert(isPresented: $showNetworkAlert) {
             Alert(
-                title: Text("Internet Connection"),
-                message: Text("Network connection seems to be offline. Please check your connection!"),
+                title: Text("internetConnectionAlertTitleString"),
+                message: Text("internetConnectionAlertMessageString"),
                 dismissButton: .default(Text("Close"))
             )
         }

@@ -15,7 +15,7 @@ struct CategoriesView: View {
     
     var body: some View {
         VStack {
-            Text("Category Filters")
+            Text("categoryFiltersString")
                 .font(.title)
                 .padding(.top, 20)
             
